@@ -52,7 +52,7 @@ func checkDataType(jsonInput string) string {
 
 func getValue(strKey string, intKey int, jsonData interface{}) {
 
-	// when continually destructure the JSON data structure depending on its current type
+	// use switch cases to destructure the JSON data structure depending on its current type
 	switch jsonData.(type) {
 	case []interface{}:
 		// iterate through values in interface array, calling getValue() on each, preserving the index
