@@ -11,12 +11,6 @@ import (
 	"strings"
 )
 
-type jsonTuple struct {
-	intKey int
-	strKey string
-	data   interface{}
-}
-
 var flagInput = flag.String("i", "", "Specifies the input file")
 var flagOutput = flag.String("o", "", "Specifies the output file")
 
@@ -205,7 +199,7 @@ func checkDataType(jsonInput string) string {
 }
 
 func main() {
-	// "Usage: main.exe filepath"
+	// "Usage: main.exe -i filepath"
 	// Optionally, specify an output "main.exe -i filepath -o output.txt"
 
 	if *flagOutput != "" {
